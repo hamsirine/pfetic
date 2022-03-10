@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <!-- Login -->
+
+    <hr class="featurette-divider" style="color: #ededed">
+    <p class="tip"></p>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Ravi de vous revoir!</h2>
+                <label>
+                    <span>Matricule</span>
+                    <input type="text" maxlength="5" required/>
+                </label>
+
+            <label>
+                <span>Mot de passe</span>
+                <input type="Password" maxlength="6" />
+            </label>
+
+            <button type="button" class="submit text-black" href="">Connexion</button>
+            <div class="container text-center">
+                <img src="{{ asset('images/lapostee.JPG') }}" alt="logo"  width="240rem"/>
+            </div>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+
+                    <h2></h2>
+                </div>
+                <div class="img__text m--in">
+                    <h2> connectez-vous!</h2>
+                </div>
+                <div class="img__btn">
+
+                    <span class="m--up">Inscription</span>
+                    <span class="m--in">Connexion</span>
+                </div>
+            </div>
+
+            <div class="form sign-up">
+                {{ form_start(f,{'attr': {'novalidate': 'novalidate'}}) }}
+                <h2>Inscrivez-vous</h2>
+                <div class="form-control">
+                    <label for="" id="matricule">Matricule</label>
+                    {{ form_widget(f.Matricule) }}
+                    {{ form_errors(f.Matricule) }}
+                </div>
+                <div class="form-control">
+                    <label for="">Mot de passe</label>
+                    {{ form_widget(f.password) }}
+                    {{ form_errors(f.password) }}
+                </div>
+
+                <div class="text-center mt-3" style="border-radius: 20rem" >
+                     {{ form_end(f) }}
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <!-- End Login -->
+
+
+    <!-- FOOTER -->
+    <footer class="blog-footer text-center">
+        <div class="container px-4 px-lg-5" style="color: black">
+            <p class="m-0 text-center text-black">&copy; 2021-2022 </p>
+            <p class="m-0 text-center text-black">Adresse: 49 Rue des Entrepreneurs </p>
+            <p class="m-0 text-center text-black " >Téléphone: 71 941 535</p>
+        </div>
+    </footer>
+
+
+{% endblock %}
